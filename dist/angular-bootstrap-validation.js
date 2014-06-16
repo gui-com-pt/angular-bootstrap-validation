@@ -9,8 +9,8 @@
  *
  * This module was mainly written by SO users, see here: http://stackoverflow.com/questions/14348384/reconcile-angular-js-and-bootstrap-form-validation-styling
  */
-angular.module('bs-validation', [])
-        .factory('bsProcessValidator', ['$timeout', function($timeout) {
+angular.module('bs-validation', []).
+        factory('bsProcessValidator', ['$timeout', function($timeout) {
             return function(scope, element, ngClass, bsClass) {
                 $timeout(function() {
                     var input = element.find('input');
@@ -29,8 +29,8 @@ angular.module('bs-validation', [])
                     }
                 });
             };
-        }])
-        .directive('bsHasSuccess', ['bsProcessValidator', function(bsProcessValidator) {
+        }]).
+        directive('bsHasSuccess', ['bsProcessValidator', function(bsProcessValidator) {
             return {
                 restrict: 'A',
                 link: function(scope, element) {
@@ -42,10 +42,10 @@ angular.module('bs-validation', [])
                         bsProcessValidator(scope, element, 'ng-valid', 'has-success');
                     }
 
-                };
+                }
             };
-        }])
-        .directive('bsHasError', ['bsProcessValidator', function(bsProcessValidator) {
+        }]).
+        directive('bsHasError', ['bsProcessValidator', function(bsProcessValidator) {
             return {
                 restrict: 'A',
                 link: function(scope, element) {
@@ -57,10 +57,10 @@ angular.module('bs-validation', [])
                         bsProcessValidator(scope, element, 'ng-invalid', 'has-error');
                     }
 
-                };
+                }
             };
-        }])
-        .directive('bsHas', ['bsProcessValidator', function(bsProcessValidator) {
+        }]).
+        directive('bsHas', ['bsProcessValidator', function(bsProcessValidator) {
             return {
                 restrict: 'A',
                 link: function(scope, element) {
