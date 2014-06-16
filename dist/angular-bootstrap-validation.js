@@ -1,6 +1,6 @@
 /**
  * @ngdoc module
- * @name Angular Bootstrap validation class
+ * @name Bootstrap Validation
  * 
  * @description
  * Directives to apply bootstrap form classes on angular models
@@ -9,7 +9,7 @@
  *
  * This module was mainly written by SO users, see here: http://stackoverflow.com/questions/14348384/reconcile-angular-js-and-bootstrap-form-validation-styling
  */
-angular.module('bs-has', [])
+angular.module('bs-validation', [])
         .factory('bsProcessValidator', ['$timeout', function($timeout) {
             return function(scope, element, ngClass, bsClass) {
                 $timeout(function() {
