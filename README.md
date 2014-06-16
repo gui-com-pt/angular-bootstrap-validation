@@ -33,3 +33,12 @@ Directives:
 	</div>
 </form>
 ````
+
+#### Authors ####
+
+I've only modified a little bit the code and put it on bower. The REAL authors are:
+
+* [fiznool](http://stackoverflow.com/users/1171775/fiznool)
+* [farincz](http://stackoverflow.com/users/1838984/farincz)
+
+The SO question where they've published the code: [here](http://stackoverflow.com/questions/17326796/how-to-iterate-through-angular-scope-variables-with-a-loop)
