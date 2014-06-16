@@ -10,6 +10,7 @@ Directives:
  * bs-has-error - Add 'has-error' class
 
  You can use directives at the form element or in .form-group elements.
+
 ````html
 <form novalidate bs-has> <!-- Apply both success and error styles to name and address -->
 	<div class="form-group">
