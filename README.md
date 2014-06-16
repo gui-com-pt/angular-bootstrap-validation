@@ -23,11 +23,11 @@ Directives:
 </form>
 
 <form novalidate>
-	<div class="form-group" bs-has-error> <!-- Apply sucess styles to name only -->
+	<div class="form-group" bs-has-success> <!-- Apply sucess styles to name only -->
 		<label class="control-label">Name</label>
 		<input type="text" class="form-control" required ng-model="name" />
 	</div>
-	<div class="form-group">
+	<div class="form-group" bs-has> <!-- Apply sucess and error styles to address only -->
 		<label class="control-label">Address</label>
 		<input type="text" class="form-control" required ng-model="address" />
 	</div>
