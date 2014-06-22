@@ -28,7 +28,7 @@ angular.module('bs-validation', []).
                         });
                     }
                 });
-            };
+            }
         }]).
         directive('bsHasSuccess', ['bsProcessValidator', function(bsProcessValidator) {
             return {
@@ -43,7 +43,7 @@ angular.module('bs-validation', []).
                     }
 
                 }
-            };
+            }
         }]).
         directive('bsHasError', ['bsProcessValidator', function(bsProcessValidator) {
             return {
@@ -58,7 +58,7 @@ angular.module('bs-validation', []).
                     }
 
                 }
-            };
+            }
         }]).
         directive('bsHas', ['bsProcessValidator', function(bsProcessValidator) {
             return {
@@ -75,5 +75,5 @@ angular.module('bs-validation', []).
                     }
 
                 }
-            };
+            }
         }]);
