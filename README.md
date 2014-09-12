@@ -1,6 +1,8 @@
 Angular Bootstrap Validation
 ============================
 
+Required: jQuery 1.6+
+
 Directives to apply bootstrap styles to AngularJs form elements. 
 You can either apply success, error or both styles. In case of success state, it's only applied to dirty forms.
 
