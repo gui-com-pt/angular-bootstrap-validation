@@ -25,7 +25,7 @@
         return {
             restrict: 'A',
             link: function(scope, element) {
-                if (element.get(0).nodeName.toLowerCase() === 'form') {
+                if (element[0].nodeName.toLowerCase() === 'form') {
                     element.find('.form-group').each(function(i, formGroup) {
                         bsProcessValidator(scope, angular.element(formGroup), 'ng-valid', 'has-success');
                     });
@@ -41,7 +41,7 @@
         return {
             restrict: 'A',
             link: function(scope, element) {
-                if (element.get(0).nodeName.toLowerCase() === 'form') {
+                if (element[0].nodeName.toLowerCase() === 'form') {
                     element.find('.form-group').each(function(i, formGroup) {
                         bsProcessValidator(scope, angular.element(formGroup), 'ng-invalid', 'has-error');
                     });
