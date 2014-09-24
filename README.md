@@ -1,12 +1,28 @@
 Angular Bootstrap Validation
 ============================
 
-Required: jQuery 1.6+
-
 Directives to apply bootstrap styles to AngularJs form elements. 
 You can either apply success, error or both styles. In case of success state, it's only applied to dirty forms.
 
-Directives:
+#### Instalation
+
+jQuery 1.6 or newer is required
+
+With Bower
+
+	bower install angular-bootstrap-validation
+
+
+For a manual installation copy the angular-boostrap-validation.js inside dist folder.
+
+#### Quick Start
+
+Include the module bs-validation
+
+	angular.module('app', ['bs-validation']);
+
+You've three directives:
+
  * bs-has - Apply both success and error directives
  * bs-has-success - Add 'has-success' class
  * bs-has-error - Add 'has-error' class
@@ -37,7 +53,7 @@ Directives:
 </form>
 ````
 
-#### Authors ####
+#### Authors
 
 I've only modified a little bit the code and put it on bower. The REAL authors are:
 
