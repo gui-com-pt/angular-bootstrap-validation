@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular-Bootstrap-validation by guilhermegeek</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Angular-Bootstrap-validation</h1>
+      <h2 class="project-tagline">Directives to apply bootstrap styles to AngularJs form elements</h2>
+      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation" class="btn">View on GitHub</a>
+      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="angular-bootstrap-validation" class="anchor" href="#angular-bootstrap-validation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Bootstrap Validation</h1>
+
+<p>Directives to apply bootstrap styles to AngularJs form elements. 
+You can either apply success, error or both styles. In case of success state, it's only applied to dirty forms.</p>
+
+<h4>
+<a id="instalation" class="anchor" href="#instalation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instalation</h4>
+
+<p>jQuery 1.6 or newer is required</p>
+
+<p>With Bower</p>
+
+<pre><code>bower install angular-bootstrap-validation
+</code></pre>
+
+<p>For a manual installation copy the angular-boostrap-validation.js inside dist folder.</p>
+
+<h4>
+<a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick Start</h4>
+
+<p>Include the module bs-validation</p>
+
+<pre><code>angular.module('app', ['bs-validation']);
+</code></pre>
+
+<p>You've three directives:</p>
+
+<ul>
+<li>bs-has - Apply both success and error directives</li>
+<li>bs-has-success - Add 'has-success' class</li>
+<li>
+<p>bs-has-error - Add 'has-error' class</p>
+
+<p>You can use directives at the form element or in .form-group elements.</p>
+</li>
+</ul>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">form</span> <span class="pl-e">novalidate</span> <span class="pl-e">bs-has</span>&gt; <span class="pl-c">&lt;!-- Apply both success and error styles to name and address --&gt;</span>
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">label</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>control-label<span class="pl-pds">"</span></span>&gt;Name&lt;/<span class="pl-ent">label</span>&gt;
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">required</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span>&gt;
+        &lt;<span class="pl-ent">label</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>control-label<span class="pl-pds">"</span></span>&gt;Address&lt;/<span class="pl-ent">label</span>&gt;
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">required</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">form</span>&gt;
+
+&lt;<span class="pl-ent">form</span> <span class="pl-e">novalidate</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span> <span class="pl-e">bs-has-success</span>&gt; <span class="pl-c">&lt;!-- Apply sucess styles to name only --&gt;</span>
+        &lt;<span class="pl-ent">label</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>control-label<span class="pl-pds">"</span></span>&gt;Name&lt;/<span class="pl-ent">label</span>&gt;
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">required</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>name<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+    &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-group<span class="pl-pds">"</span></span> <span class="pl-e">bs-has</span>&gt; <span class="pl-c">&lt;!-- Apply sucess and error styles to address only --&gt;</span>
+        &lt;<span class="pl-ent">label</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>control-label<span class="pl-pds">"</span></span>&gt;Address&lt;/<span class="pl-ent">label</span>&gt;
+        &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">required</span> <span class="pl-e">ng-model</span>=<span class="pl-s"><span class="pl-pds">"</span>address<span class="pl-pds">"</span></span> /&gt;
+    &lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">form</span>&gt;</pre></div>
+
+<h4>
+<a id="authors" class="anchor" href="#authors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors</h4>
+
+<p>I've only modified a little bit the code and put it on bower. The REAL authors are:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/users/1171775/fiznool">fiznool</a></li>
+<li><a href="http://stackoverflow.com/users/1838984/farincz">farincz</a></li>
+</ul>
+
+<p>The SO question where they've published the code: <a href="http://stackoverflow.com/questions/17326796/how-to-iterate-through-angular-scope-variables-with-a-loop">here</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/guilhermegeek/angular-bootstrap-validation">Angular-Bootstrap-validation</a> is maintained by <a href="https://github.com/guilhermegeek">guilhermegeek</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
