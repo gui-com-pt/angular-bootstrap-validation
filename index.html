@@ -4,27 +4,57 @@
     <meta charset="UTF-8">
     <title>Angular-Bootstrap-validation by guilhermegeek</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.0-rc.2/angular.min.js"></script>
+    
+    <script type="text/javascript" src="bower_components/angular-bootstrap-validation/dist/angular-bootstrap-validation.js"></script>
+    <script type="text/javascript">
+      angular
+        .module('test', ['bs-validation']);
+      angular
+        .module('test')
+        .controller('testCtrl', ['$scope', function($scope){
+          
+        }])
+    </script>
   </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Angular-Bootstrap-validation</h1>
-      <h2 class="project-tagline">Directives to apply bootstrap styles to AngularJs form elements</h2>
-      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation" class="btn">View on GitHub</a>
-      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation/tarball/master" class="btn">Download .tar.gz</a>
+  <body ng-app="test">
+    <div class="container">
+      <section class="jumbotron">
+      <h1 class="project-name">Angular Bootstrap Validation</h1>
+      <p>Directives to apply bootstrap styles to AngularJs form elements</p>
+      <div class="row">
+      <div class="col-sm-offset-3 col-sm-6">
+      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation" class="btn btn-default col-sm-4">View on GitHub</a>
+      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation/zipball/master" class="btn btn-default col-sm-4">Download .zip</a>
+      <a href="https://github.com/guilhermegeek/angular-bootstrap-validation/tarball/master" class="btn btn-default col-sm-4">Download .tar.gz</a>
+      </div>
+      </div>
     </section>
 
     <section class="main-content">
       <h1>
-<a id="angular-bootstrap-validation" class="anchor" href="#angular-bootstrap-validation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Bootstrap Validation</h1>
+<a id="angular-bootstrap-validation" class="anchor" href="#angular-bootstrap-validation" aria-hidden="true"><span class="octicon octicon-link"></span></a>BS-Validation</h1>
 
 <p>Directives to apply bootstrap styles to AngularJs form elements. 
 You can either apply success, error or both styles. In case of success state, it's only applied to dirty forms.</p>
-
+<div class="row">
+  <form ng-controller="testCtrl" novalidate bs-has name="testForm" class="col-md-6"> <!-- Apply both success and error styles to name and address -->
+    <div class="form-group">
+        <label class="control-label">Name - minlength 3</label>
+        <input type="text" class="form-control" required ng-model="name" ng-minlength="3" />
+    </div>
+    <div class="form-group">
+        <label class="control-label">Address - minlength 5</label>
+        <input type="text" class="form-control" required ng-model="address" ng-minlength="5" />
+    </div>
+    <div ng-if="testForm.$pristine">Type anything in form</div>
+  </form>
+</div>
 <h4>
 <a id="instalation" class="anchor" href="#instalation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Instalation</h4>
 
@@ -98,8 +128,7 @@ You can either apply success, error or both styles. In case of success state, it
       </footer>
 
     </section>
-
-  
+    </div> 
   </body>
 </html>
 
