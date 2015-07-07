@@ -1,0 +1,19 @@
+{
+	"name": "angular-bootstrap-validation",
+	"version": "0.0.4",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:guilhermegeek/angular-bootstrap-validation.git"
+	},
+	"author": "Guilherme Cardoso <email@guilhermecardoso.pt>",
+	"description": "Directives to apply bootstrap styles to AngularJs form elements",
+	"homepage": "https://github.com/guilhermegeek/angular-bootstrap-validation",
+	"bugs": {
+		"email": "email@volupio.com"
+	},
+	"devDependencies":  {
+            "grunt": "~0.4.2",
+	    	"grunt-contrib-uglify": "~0.2.2",
+            "grunt-contrib-concat": "~0.4"
+	}
+}

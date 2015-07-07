@@ -1,0 +1,32 @@
+{
+  "name": "angular-bootstrap-validation",
+  "version": "0.0.5",
+  "homepage": "https://github.com/guilhermegeek/angular-bootstrap-validation",
+  "authors": [
+    "Guilherme Cardoso"
+  ],
+  "description": "Angular directives to apply bootstrap styles on elements",
+  "main": "dist/angular-bootstrap-validation.js",
+  "keywords": [
+    "angularjs",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.5",
+    "commit": "5e23197b4d09a71553a2e3da0a44f8405cac555c"
+  },
+  "_source": "git://github.com/guilhermegeek/angular-bootstrap-validation.git",
+  "_target": "~0.0.5",
+  "_originalSource": "angular-bootstrap-validation",
+  "_direct": true
+}
