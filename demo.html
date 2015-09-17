@@ -10,12 +10,13 @@
     	angular
     		.module('test')
     		.controller('testCtrl', ['$scope', function($scope){
-    			
+
     		}])
     </script>
     <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
   </head>
   <body ng-app="test">
+  <h4>Form and Fields</h4>
 	<form ng-controller="testCtrl" novalidate bs-has name="testForm"> <!-- Apply both success and error styles to name and address -->
 		<div class="form-group">
 		    <label class="control-label">Name - minlength 3</label>
@@ -27,6 +28,13 @@
 		</div>
 		<div ng-if="testForm.$pristine">Type anything in form</div>
 	</form>
-
+  <h4>Form only</form>
+  <form ng-controller="testCtrl" novalidate bs-has name="testForm2"> <!-- Apply both success and error styles to name and address -->
+		<div class="form-group">
+		    <label class="control-label">Address</label>
+		    <input type="text" class="form-control" required ng-model="address" ng-minlength="2" />
+		</div>
+		<div ng-if="testForm2.$pristine">Type anything in form</div>
+	</form>
   </body>
 </html>
