@@ -4,7 +4,7 @@ Angular Bootstrap Validation
 Directives to apply bootstrap styles to AngularJs form elements. 
 You can either apply success, error or both styles. In case of success state, it's only applied to dirty forms.
 
-Check the demo: [http://guilhermegeek.github.io/angular-bootstrap-validation/](http://guilhermegeek.github.io/angular-bootstrap-validation/)
+Check the demo: [http://gui-acab.github.io/angular-bootstrap-validation/](http://guilhermegeek.github.io/angular-bootstrap-validation/)
 
 #### Instalation
 
